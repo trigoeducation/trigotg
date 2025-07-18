@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/png" href="https://i.postimg.cc/CLDMhbD5/IMG-1101.png"> 
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="https://i.postimg.cc/CLDMhbD5/IMG-1101.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TriGO Education</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
+   <style>
     /* Previous styles same as before... */
 
     * {
@@ -476,6 +476,126 @@
  @keyframes fadeInDownSection {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+  .book-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.animated-book-button {
+  background: rgba(0, 153, 255, 0.15);
+  border: 2px solid rgba(0, 153, 255, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: black; /* ✅ Text color black */
+  padding: 18px 40px;
+  border-radius: 50px;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 153, 255, 0.4), 0 0 30px rgba(0, 153, 255, 0.3);
+  animation: glowPulseBlue 2s infinite ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-book-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, #00d0ff, #0099ff, #00d0ff);
+  animation: rotateGlowBlue 5s linear infinite;
+  z-index: 0;
+  opacity: 0.15;
+}
+
+.animated-book-button span {
+  position: relative;
+  z-index: 1;
+}
+
+.animated-book-button:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 25px rgba(0, 153, 255, 0.6), 0 0 50px rgba(0, 153, 255, 0.4);
+}
+
+@keyframes glowPulseBlue {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 153, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 153, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 153, 255, 0.3);
+  }
+}
+
+@keyframes rotateGlowBlue {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+ .animated-book-button.premium-glow {
+   background-color: #D8BFD8;
+  color: black;
+  box-shadow: 0 0 15px #FFD700, 0 0 30px #FFD700;
+}
+
+.animated-book-button.premium-glow:hover {
+  box-shadow: 0 0 20px #ffdd33, 0 0 40px #ffdd33, 0 0 60px #ffcc00;
+  transform: scale(1.08);
+}
+  .premium-glow {
+  background-color: #FF5ACD;
+  color: white;
+  box-shadow: 0 0 15px #FF5ACD, 0 0 30px #FF5ACD;
+  transition: all 0.3s ease;
+}
+
+.premium-glow:hover {
+  box-shadow: 0 0 25px #ff6fd8, 0 0 50px #ff94e0, 0 0 80px #ff7ccf;
+  transform: scale(1.08);
+}
+
+.paid-glow {
+  background-color: #B0C4DE;
+  color: white;
+  box-shadow: 0 0 15px #00FF9F, 0 0 40px #00FF9F;
+  transition: all 0.3s ease;
+}
+
+.paid-glow:hover {
+  box-shadow: 0 0 15px #00ffbf, 0 0 50px #00ffc8, 0 0 80px #00ffaa;
+  transform: scale(1.08);
+}
+ .animated-book-button {
+  padding: 15px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  min-width: 200px; /* 👈 Force all buttons to same min width */
+}
+ .jee-glow {
+  background-color: #D8BFD8;
+  color: white;
+  box-shadow: 0 0 15px #4FACFE, 0 0 30px #00F2FE;
+  transition: all 0.3s ease;
+}
+
+.jee-glow:hover {
+  box-shadow: 0 0 25px #00d0ff, 0 0 50px #00f2fe, 0 0 80px #33eaff;
+  transform: scale(1.08);
 }
  </style>
 </head>
@@ -986,12 +1106,33 @@
 
 
 
-    </div>
-    <div id="books" class="section">
-      <h1>Books</h1>
-      <p>Explore our educational books collection.</p>
-    </div>
-    <div id="groups" class="section">
+    <div id="books" class="section active">
+  <div class="books-heading">BOOKS</div>
+  <p>Explore our educational books collection.</p>
+
+  <!-- 👇 Gap added below this line -->
+  <div style="margin-top: 40px;"></div>
+
+  <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;" class="book-button-container">
+    <a href="https://t.me/+R_l2PMYAT4NjZjJl" target="_blank" class="animated-book-button">
+      🚀 TriGO BOOK STORE
+    </a>
+    <a href="https://t.me/+BN8It7T3O2w0NGI9" target="_blank" class="animated-book-button premium-glow">
+      💎 PREMIUM BOOK STORE
+    </a>
+    <a href="https://t.me/+C4r6E17cOfxiZmNl" target="_blank" class="animated-book-button paid-glow">
+      💸 PAID BOOK STORE
+    </a>
+    <a href="https://t.me/+uIOSMDuVmvFmNjZl" target="_blank" class="animated-book-button jee-glow">
+      📘 JEE BOOK STORE
+    </a>
+  </div>
+</div>
+
+
+ 
+
+     <div id="groups" class="section">
       <h1>Groups</h1>
       <p>Join study groups and connect with others.</p>
     </div>
