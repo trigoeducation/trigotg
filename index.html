@@ -784,6 +784,52 @@ overflow: hidden; // or auto
 .cta-btn:hover {
   transform: scale(1.05);
 }
+.news-card {
+  background: #2C2C3E;
+  color: #eee;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 0 18px #d98880;
+  margin-top: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.news-card h2 {
+  font-size: 18px;
+  color: #ffcf00;
+  margin-bottom: 8px;
+}
+
+.published-date {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 12px;
+}
+
+.news-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.news-info {
+  list-style: none;
+  padding-left: 0;
+}
+
+.news-info li {
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.news-card a {
+  color: #00fff2;
+  text-decoration: underline;
+}
+
+.news-card a:hover {
+  text-decoration: none;
+}
 </style>
 </head>
 <body>
@@ -1570,7 +1616,28 @@ overflow: hidden; // or auto
 <div id="nta-news" class="section">
   <h1>NTA NEWS</h1>
   <p>Announcements and updates from the TriGO team.</p>
+
+  <!-- ICAR 2025 Article -->
+  <article class="news-card">
+    <h2>📢 PUBLIC NOTICE | ICAR 2025</h2>
+    <p class="published-date">Posted: <strong>18 July 2025</strong></p>
+    <p>
+      Answer key Challenge window, Provisional Answer Keys, QPs & Recorded Responses for 
+      <strong>ICAR AIEEA (PG)</strong> & <strong>AICE-JRF/SRF (Ph.D.)</strong> 2025 are now live.
+    </p>
+    <ul class="news-info">
+      <li>🔗 Challenge window: 18–20 July 2025 (till 11:50 PM)</li>
+      <li>👉 Submit at: 
+        <a href="https://exams.nta.ac.in/ICAR/" target="_blank">https://exams.nta.ac.in/ICAR/</a>
+      </li>
+      <li>📞 Help: 011-40759000</li>
+      <li>✉️ Email: 
+        <a href="mailto:icar@nta.ac.in">icar@nta.ac.in</a>
+      </li>
+    </ul>
+  </article>
 </div>
+
 
 <div id="official" class="section">
   <h1>Official</h1>
