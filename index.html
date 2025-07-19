@@ -586,6 +586,75 @@
   box-shadow: 0 0 25px #00d0ff, 0 0 50px #00f2fe, 0 0 80px #33eaff;
   transform: scale(1.08);
 }
+.group-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.group-card {
+  background-color: #1a1a1a;
+  color: #ffcc00;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #ffcc00;
+  padding: 15px;
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.group-card:hover {
+  box-shadow: 0 0 20px #ffe066;
+}
+
+.group-thumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 0 5px #ffcc00;
+  margin-bottom: 10px;
+}
+
+.group-info {
+  text-align: center;
+}
+
+.group-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.group-join-btn {
+  text-decoration: none;
+  background-color: #ffcc00;
+  color: #1a1a1a;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.group-join-btn:hover {
+  background-color: #ffe066;
+}
+.group-title {
+  font-size: 13.2px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 240px;
+  margin: 0 auto 8px;
+}
 </style>
 </head>
 <body>
@@ -595,15 +664,16 @@
       <span>TriGO Education</span>
     </div>
     <ul>
+    
       <li class="active" onclick="showSection(event, 'mentorship')"><i class="fas fa-chalkboard-teacher"></i>Mentorship</li>
       <li onclick="showSection(event, 'shop')"><i class="fas fa-shopping-cart"></i>Shop</li>
       <li onclick="showSection(event, 'books')"><i class="fas fa-book"></i>Books</li>
       <li onclick="showSection(event, 'groups')"><i class="fas fa-users"></i>Groups</li>
       <li onclick="showSection(event, 'channel')"><i class="fas fa-bullhorn"></i>Channel</li>
-    </ul>
-  </div>
+      </ul>
+      </div>
 
-  <div class="content">
+    <div class="content">
     <div id="mentorship" class="section active" style="position: relative;">
 
       <!-- Payment Button top-right corner -->
@@ -1096,7 +1166,7 @@
 
 
   <div id="books" class="section">
-  <div class="books-heading">BOOKS</div>
+  <h1>Books</h1>
   <p>Explore our educational books collection.</p>
   <!-- 👇 Gap added below this line -->
   <div style="margin-top: 40px;"></div>
@@ -1116,18 +1186,181 @@
     
 </div>
 
-    <div id="groups" class="section">
-      <h1>Groups</h1>
-      <p>Join study groups and connect with others.</p>
-    </div>
-    <div id="channel" class="section">
-      <h1>Channel</h1>
-      <p>Announcements and updates from the TriGO team.</p>
+      <!-- Add more section here the same way --> 
+</div>
+
+
+
+  <div id="groups" class="section">
+  <h1>TriGO Groups</h1>
+  <p>Join study groups and connect with others.</p>
+  <div style="margin-top: 40px;"></div>
+
+
+ <div class="group-grid">
+
+  <!-- NeeJEEflix Group -->
+  <div class="group-card">
+    <img src="https://i.postimg.cc/NFbmW8p0/Chat-GPT-Image-Jun-6-2025-02-09-37-PM.png" class="group-thumbnail">
+    <div class="group-info">
+      <div class="group-title">NeeJEEflix Group</div>
+      <a href="https://t.me/+rkTaBVljuJFhNTk9" class="group-join-btn">Join Now</a>
     </div>
   </div>
 
+  <!-- NEETprep Doubt Discussions -->
+  <div class="group-card">
+    <img src="https://i.postimg.cc/J45RC6Nx/photo-2025-07-16-01-15-33.jpg" class="group-thumbnail">
+    <div class="group-info">
+      <div class="group-title">NEETprep Discussions</div>
+      <a href="https://t.me/+AeaOr18OuTQwNTk1" class="group-join-btn">Join Now</a>
+    </div>
+  </div>
+
+  <!-- NEET JEE DOUBT 24 x 7 -->
+  <div class="group-card">
+    <img src="https://i.postimg.cc/VNYrc00r/Chat-GPT-Image-Jun-2-2025-06-41-24-PM.png" class="group-thumbnail">
+    <div class="group-info">
+      <div class="group-title">NEET JEE DOUBT 24x7</div>
+      <a href="https://t.me/+BlFBCH1dUHNmN2Zl" class="group-join-btn">Join Now</a>
+    </div>
+  </div>
+
+  <!-- NTA Doubt Discussion -->
+  <div class="group-card">
+    <img src="https://i.postimg.cc/bw1CBW1Y/photo-2025-07-19-05-38-21.jpg" class="group-thumbnail">
+    <div class="group-info">
+      <div class="group-title">NTA Discussions</div>
+      <a href="https://t.me/+U7ZPVsN89vYyOGY9" class="group-join-btn">Join Now</a>
+    </div>
+  </div>
+
+  <!-- NEET JEE PREP 2026 -->
+  <div class="group-card">
+    <img src="https://i.postimg.cc/wjkPBnMf/photo-2025-06-05-13-56-56.jpg" class="group-thumbnail">
+    <div class="group-info">
+      <div class="group-title">NEET JEE PREP 2026</div>
+      <a href="https://t.me/+0mv44F_9JYw1NTdl" class="group-join-btn">Join Now</a>
+    </div>
+  </div>
+
+  <!-- Aakash NEET/JEE Discussion -->
+  <div class="group-card">
+    <img src="https://i.postimg.cc/m2nk56Bn/photo-2024-02-14-13-03-21.jpg" class="group-thumbnail">
+    <div class="group-info">
+      <div class="group-title">Aakash Discussions</div>
+      <a href="https://t.me/+5swrDEXmshM1MDM1" class="group-join-btn">Join Now</a>
+    </div>
+  </div>
+
+  <!-- Arjuna NEET JEE Dis... -->
+  <div class="group-card">
+    <img src="https://i.postimg.cc/RFY2Bfhv/photo-2024-10-10-21-24-39.jpg" class="group-thumbnail">
+    <div class="group-info">
+      <div class="group-title" title="Arjuna NEET JEE Discussion">Arjuna Discussions</div>
+      <a href="https://t.me/+ec_MzGQ4WCI2M2Y9" class="group-join-btn">Join Now</a>
+    </div>
+  </div>
+
+  <!-- LAKSHYA DiSCUSSiONS PW -->
+  <div class="group-card">
+    <img src="https://i.postimg.cc/J4j7p7Ys/photo-2024-01-19-19-19-00.jpg" class="group-thumbnail">
+    <div class="group-info">
+      <div class="group-title">Lakshya Discussions</div>
+      <a href="https://t.me/+RNrQIxNRtXYwZTE1" class="group-join-btn">Join Now</a>
+    </div>
+  </div>
+
+  <!-- Yakeen Discussions -->
+  <div class="group-card">
+    <img src="https://i.postimg.cc/9fkjWsN3/photo-2024-06-01-22-29-26.jpg" class="group-thumbnail">
+    <div class="group-info">
+      <div class="group-title">Yakeen Discussions</div>
+      <a href="https://t.me/+K3uMcgQf61pjYmJl" class="group-join-btn">Join Now</a>
+    </div>
+  </div>
+
+  <!-- TriGO Kingdom -->
+  <div class="group-card">
+    <img src="https://i.postimg.cc/6544tNjK/Image-Jun-7-2025-03-40-56-PM.png" class="group-thumbnail">
+    <div class="group-info">
+      <div class="group-title">TriGO Kingdom (Chats)</div>
+      <a href="https://t.me/+q_HC99c54btkOTJl" class="group-join-btn">Join Now</a>
+    </div>
+  </div>
+
+</div>
+
+
+<style>
+.group-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #ffcc00;
+  padding: 15px;
+  margin-top: 15px;
+  transition: box-shadow 0.3s ease;
+}
+.group-card:hover {
+  box-shadow: 0 0 20px #ffe066;
+}
+.group-thumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 0 5px #ffcc00;
+}
+.group-info {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.group-title {
+  color: #ffcc00;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.group-join-btn {
+  text-decoration: none;
+  background-color: #ffcc00;
+  color: #1a1a1a;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+.group-join-btn:hover {
+  background-color: #ffe066;
+}
+</style>
+
+
+
+
+
+
+
+    
+
+
+    </div>
+
+    <div id="channel" class="section">
+      <h1>Channel</h1>
+      <p>Announcements and updates from the TriGO team.</p>
+
+    </div>
+
+  </div>
+
   <div class="footer">
-    &copy; 2025 TriGO. All rights reserved.
+    © 2025 TriGO | Learn. Practice. Succeed.
   </div>
 
   <!-- Lightbox -->
