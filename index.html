@@ -703,6 +703,87 @@ overflow: hidden; // or auto
 ::-webkit-scrollbar {
   display: none;
 }
+#help-center {
+  max-width: 380px;
+  width: 100%;
+  margin: auto;
+  background: #2C2C3E;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 25px #d98880;
+  text-align: center;
+}
+
+#help-center h1 {
+  font-size: 17px;
+  margin: 10px 0;
+  color: transparent;
+  background-image: linear-gradient(90deg, #ff6ec4, #7873f5, #4ade80);
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: textFlow 5s linear infinite;
+}
+
+@keyframes textFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+.help-logo {
+  width: 300px;
+  height: 180px;
+  margin: 0 auto 20px;
+  background: radial-gradient(circle at center, #00f2ff 0%, #8b00ff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 12px; /* 👈 slight rounding for premium feel */
+}
+
+.help-logo img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain; /* ensures image stays crisp inside square */
+}
+
+
+.help-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #ffcf00, #ffc800);
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+}
 </style>
 </head>
 <body>
@@ -1496,11 +1577,18 @@ overflow: hidden; // or auto
   <p>Announcements and updates from the TriGO team.</p>
 </div>
 
-<div id="help-center" class="section">
-  <h1>Help Center</h1>
-  <p>Announcements and updates from the TriGO team.</p>
-</div>
+<section id="help-center" class="section">
+  <h1>🆘 Stuck Somewhere? TriGO Help Centre Got You!</h1>
+  <div class="help-logo">
+    <img src="https://i.postimg.cc/bvs21LVV/Copilot-20250719-214016.png" alt="TeamTriGO Logo" />
+  </div>
+  <p class="help-text">Find quick solutions — all in one place for the NEET/JEE community.</p>
+  <div class="highlight">🚨 Get Instant Support with TriGO Help Centre</div>
+  <a href="https://t.me/+NfOR51Wd4M1lNTFl" class="cta-btn" target="_blank" rel="noopener noreferrer">Join TriGO Help Centre</a>
+</section>
 
+
+  </div>
 
   <div class="footer">
     © 2025 TriGO | Learn. Practice. Succeed.
