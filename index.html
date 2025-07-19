@@ -655,6 +655,54 @@
   max-width: 240px;
   margin: 0 auto 8px;
 }
+.channel-button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-top: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.channel-button:hover {
+  background-color: #e0e0e0;
+}
+
+.channel-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.channel-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 16px;
+}
+display: flex;
+height: 100vh;
+overflow: hidden; // or auto
+/* Make sure parent allows child to expand naturally */
+#channel.section {
+  max-height: unset;
+  overflow-y: visible;
+  flex-grow: 1;
+}
+
+/* Optional: Prevent hard scrollbars from appearing */
+.channel-button {
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+/* Optional: Hide unwanted scroll indicators */
+::-webkit-scrollbar {
+  display: none;
+}
 </style>
 </head>
 <body>
@@ -663,15 +711,38 @@
       <img src="https://i.postimg.cc/CLDMhbD5/IMG-1101.png" alt="TriGO Logo">
       <span>TriGO Education</span>
     </div>
-    <ul>
     
-      <li class="active" onclick="showSection(event, 'mentorship')"><i class="fas fa-chalkboard-teacher"></i>Mentorship</li>
-      <li onclick="showSection(event, 'shop')"><i class="fas fa-shopping-cart"></i>Shop</li>
-      <li onclick="showSection(event, 'books')"><i class="fas fa-book"></i>Books</li>
-      <li onclick="showSection(event, 'groups')"><i class="fas fa-users"></i>Groups</li>
-      <li onclick="showSection(event, 'channel')"><i class="fas fa-bullhorn"></i>Channel</li>
-      </ul>
-      </div>
+    <ul>
+    <li class="active" onclick="showSection(event, 'mentorship')">
+    <i class="fas fa-chalkboard-teacher"></i> Mentorship
+    </li>
+    <li onclick="showSection(event, 'shop')">
+    <i class="fas fa-shopping-cart"></i> Shop
+    </li>
+    <li onclick="showSection(event, 'books')">
+    <i class="fas fa-book"></i> Books
+    </li>
+    <li onclick="showSection(event, 'groups')">
+    <i class="fas fa-users"></i> Groups
+    </li>
+    <li onclick="showSection(event, 'channel')">
+    <i class="fas fa-bullhorn"></i> Channel
+    </li>
+    <!-- New Sections -->
+    <li onclick="showSection(event, 'trigo-news')">
+    <i class="fas fa-newspaper"></i> TriGO NEWS
+    </li>
+    <li onclick="showSection(event, 'nta-news')">
+    <i class="fas fa-info-circle"></i> NTA NEWS
+    </li>
+    <li onclick="showSection(event, 'official')">
+    <i class="fas fa-shield-alt"></i> Official
+    </li>
+    <li onclick="showSection(event, 'help-center')">
+    <i class="fas fa-hands-helping"></i> Help Center
+    </li>
+    </ul>
+</div>
 
     <div class="content">
     <div id="mentorship" class="section active" style="position: relative;">
@@ -1345,22 +1416,91 @@
 
 
 
-
-
-
+</div>
 
     
+<div id="channel" class="section">
+  <h1>Channel</h1>
+  <p>Our Telegram channels.</p>
+  
+  <a href="https://t.me/+nET5vlocYrVhMzU9" target="_blank" class="channel-button">
+    <img src="https://i.postimg.cc/26H8zQ8K/photo-2025-07-19-15-17-35.jpg" alt="TriGO Advertisement" class="channel-logo">
+    <span class="channel-name">TriGO Advertisement</span>
+  </a>
+<a href="https://t.me/+L1kv_R9ZwXQ0ZTI1" target="_blank" class="channel-button">
+    <img src="https://i.postimg.cc/L438DZd7/photo-2025-07-19-15-24-07.jpg" alt="TriGO Education" class="channel-logo">
+    <span class="channel-name">TriGO Education</span>
+  </a>
+<a href="https://t.me/+G3Sz7qBRlYAzNjQ1" target="_blank" class="channel-button">
+    <img src="https://i.postimg.cc/SR5fX1G2/photo-2025-07-19-15-19-36.jpg" alt="TriGO MOTiVATiON" class="channel-logo">
+    <span class="channel-name">TriGO MOTiVATiON</span>
+  </a>
+<a href="https://t.me/+x8MVWhZoPis4YTA1" target="_blank" class="channel-button">
+    <img src="https://i.postimg.cc/s2QQxfNc/photo-2025-06-16-21-29-36.jpg" alt="TriGO [BACK-UP] ⌁" class="channel-logo">
+    <span class="channel-name">TriGO [BACK-UP] ⌁</span>
+  </a>
+<a href="https://t.me/+_oZv62S5-X5hZTk1" target="_blank" class="channel-button">
+    <img src="https://i.postimg.cc/28W0bv1q/photo-2024-08-10-22-11-00.jpg" alt="NCERT HIGHLIGHTS" class="channel-logo">
+    <span class="channel-name">NCERT HIGHLIGHTS</span>
+  </a>
+<a href="https://t.me/+c31B_Bp4NgJjYTI1" target="_blank" class="channel-button">
+    <img src="https://i.postimg.cc/65SNwCDy/photo-2025-05-29-23-32-38.jpg" alt="ANNOTATED NCERT" class="channel-logo">
+    <span class="channel-name">ANNOTATED NCERT</span>
+  </a>
+<a href="https://t.me/+CmCfMZ45deszMzU1" target="_blank" class="channel-button">
+    <img src="https://i.postimg.cc/FRq2m4Bw/photo-2024-07-16-19-30-53.jpg" alt="KOTA NEET NOTES" class="channel-logo">
+    <span class="channel-name">KOTA NEET NOTES</span>
+  </a>
+<a href="https://t.me/+cu9lxGVrkJg4YmE9" target="_blank" class="channel-button">
+    <img src="https://i.postimg.cc/rmfjSNTT/photo-2025-07-19-17-51-40.jpg" alt="NEET/JEE STUDY NOTES" class="channel-logo">
+    <span class="channel-name">NEET/JEE STUDY NOTES</span>
+  </a>
+<a href="https://t.me/+D8cDfCItTy0wMmRl" target="_blank" class="channel-button">
+    <img src="https://i.postimg.cc/6QgjShSh/photo-2024-01-06-15-46-58.jpg" alt="NEET/JEE QUiZ KHAZANA" class="channel-logo">
+    <span class="channel-name">NEET/JEE QUiZ KHAZANA</span>
+  </a>
+<a href="https://t.me/+V1tU1yHP5jNkZmU1" target="_blank" class="channel-button">
+    <img src="https://i.postimg.cc/QC0n6rrF/photo-2025-07-05-15-48-12.jpg" alt="TOPIC WISE PHYSICS DPPS" class="channel-logo">
+    <span class="channel-name">TOPIC WISE PHYSICS DPPS</span>
+  </a>
+<a href="https://t.me/+y1gjdZNFkxphMDI0" target="_blank" class="channel-button">
+    <img src="https://i.postimg.cc/hjnycGDJ/photo-2025-07-05-15-48-33.jpg" alt="TOPIC WISE CHEMISTRY DPPS" class="channel-logo">
+    <span class="channel-name">TOPIC WISE CHEMISTRY DPPS</span>
+  </a>
+<a href="https://t.me/+qv0F6GICE5w0MDNk" target="_blank" class="channel-button">
+    <img src="https://i.postimg.cc/PxK4HzVc/photo-2025-07-05-15-49-27.jpg" alt="TOPIC WISE BOTANY DPPS" class="channel-logo">
+    <span class="channel-name">TOPIC WISE BOTANY DPPS</span>
+  </a>
+<a href="https://t.me/+GvtzUP16IdAyNmZk" target="_blank" class="channel-button">
+    <img src="https://i.postimg.cc/BbXx0WKL/photo-2025-07-05-15-49-39.jpg" alt="TOPIC WISE ZOOLOGY DPPS" class="channel-logo">
+    <span class="channel-name">TOPIC WISE ZOOLOGY DPPS</span>
+  </a>
+<a href="https://t.me/+fjlgaoSNBvIzMzFl" target="_blank" class="channel-button">
+    <img src="https://i.postimg.cc/d1ZF1w8n/photo-2025-05-26-22-10-22.jpg" alt="Surprised Group" class="channel-logo">
+    <span class="channel-name">SURPRISED GROUP</span>
+  </a>
+</div>
 
+<div id="trigo-news" class="section">
+  <h1>TriGO NEWS</h1>
+  <p>Announcements and updates from the TriGO team.</p>
+</div>
 
-    </div>
+<div id="nta-news" class="section">
+  <h1>NTA NEWS</h1>
+  <p>Announcements and updates from the TriGO team.</p>
+</div>
 
-    <div id="channel" class="section">
-      <h1>Channel</h1>
-      <p>Announcements and updates from the TriGO team.</p>
+<div id="official" class="section">
+  <h1>Official</h1>
+  <p>Announcements and updates from the TriGO team.</p>
+</div>
 
-    </div>
+<div id="help-center" class="section">
+  <h1>Help Center</h1>
+  <p>Announcements and updates from the TriGO team.</p>
+</div>
 
-  </div>
 
   <div class="footer">
     © 2025 TriGO | Learn. Practice. Succeed.
