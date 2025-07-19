@@ -830,6 +830,65 @@ overflow: hidden; // or auto
 .news-card a:hover {
   text-decoration: none;
 }
+.admin-form {
+  background: #2C2C3E;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 25px #00fff2a0;
+  max-width: 500px;
+  margin: 20px auto;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.admin-form h2 {
+  font-size: 20px;
+  color: #ffcf00;
+  margin-bottom: 10px;
+}
+
+.criteria {
+  font-size: 14px;
+  background: #1c1c2b;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+.admin-form label {
+  margin-top: 10px;
+  display: block;
+  font-weight: bold;
+}
+
+.admin-form input,
+.admin-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  background: #444;
+  color: #fff;
+}
+
+.admin-form button {
+  background: linear-gradient(135deg, #00f2ff, #8b00ff);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.admin-form button:hover {
+  transform: scale(1.05);
+}
 </style>
 </head>
 <body>
@@ -863,7 +922,7 @@ overflow: hidden; // or auto
     <i class="fas fa-info-circle"></i> NTA NEWS
     </li>
     <li onclick="showSection(event, 'official')">
-    <i class="fas fa-shield-alt"></i> Official
+    <i class="fas fa-shield-alt"></i> Official Notice
     </li>
     <li onclick="showSection(event, 'help-center')">
     <i class="fas fa-hands-helping"></i> Help Center
@@ -1723,7 +1782,55 @@ overflow: hidden; // or auto
 <div id="official" class="section">
   <h1>Official</h1>
   <p>Announcements and updates from the TriGO team.</p>
+
+  <form action="https://formsubmit.co/teamtrigoofficial@gmail.com" method="POST" class="admin-form">
+    <h2>🌸 Girls Admin Application – NEETprep Doubt Discussion Group</h2>
+
+    <p class="criteria">
+      <strong>Eligibility Criteria:</strong><br>
+      This application is open only to <em>female NEET droppers</em> who have a strong command over the syllabus and are capable of solving doubts confidently.
+    </p>
+
+    <label>Full Name:</label>
+    <input type="text" name="Full Name" required>
+
+    <label>Telegram Name (Display Name):</label>
+    <input type="text" name="Telegram Name" required>
+
+    <label>Your Class / Track:</label>
+    <select name="Class" required>
+      <option value="" disabled selected>Select your track</option>
+      <option value="NEET">NEET</option>
+      <option value="JEE">JEE</option>
+      <option value="MBBS">MBBS</option>
+      <option value="IITIAN">IITIAN</option>
+    </select>
+
+    <label>Telegram ID (Username):</label>
+    <input type="text" name="Telegram ID" required>
+
+    <label>Your Gmail ID:</label>
+    <input type="email" name="Gmail ID" required>
+
+    <label>Which NEET Drop Are You Taking?</label>
+    <input type="text" name="NEET Drop" required>
+
+    <label>Why do you want to become an Admin?</label>
+    <textarea name="Reason" rows="4" required></textarea>
+
+    <!-- FormSubmit Settings -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_subject" value="Girls Admin Form – New Submission">
+    <input type="hidden" name="_autoresponse" value="Thank you for applying! Our TriGO team will review your submission soon.">
+    <input type="hidden" name="_next" value="https://trigo-dashboard.vercel.app/thanks.html">
+
+    <button type="submit">🚀 Submit Application</button>
+  </form>
 </div>
+
+
+
 
 <section id="help-center" class="section">
   <h1>🆘 Stuck Somewhere? TriGO Help Centre Got You!</h1>
